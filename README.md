@@ -10,13 +10,13 @@
 
 
 
-I use Terraform for Infrastructure-as-Code (IaC). I use some common-sense principles and guidelines derived from my practices over the years. This repository is a template of a a typical terraform environment.
+I use Terraform for Infrastructure-as-Code (IaC). I use some common-sense principles and guidelines derived from my practices over the years. This repository is a template of a typical terraform environment.
 
 ## Principles
 
 ### Source of Truth
 
-The reason of IaC is to have infrastructure created represented in code so that we can view it in code and create or recreate if so required.
+The reason of IaC is to have infrastructure created represented in code so that we can view it in code, create or recreate the target environment when required.
 
 With source control tools such as git, we can track changes we make to an environment.
 
@@ -26,7 +26,7 @@ With tool such as terraform, we can detect deviation between code and target env
 
 An IaC developer should feel safe when changes he make is isolated to the environment he is working on, and not impact other environments or resources. 
 
-For example, changing `eks-dev` terraform environment does not impact `eks-prod` etrraform environment.
+For example, changing `eks-dev` terraform environment does not impact `eks-prod` terraform environment.
 
 For example, adding user `joe` to group `developer` does not kick out another user `harry` from the group.
 
