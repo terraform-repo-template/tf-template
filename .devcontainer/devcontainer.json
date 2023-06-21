@@ -9,11 +9,17 @@
     "vscode": {
       "extensions": [
         "timonwong.shellcheck",
-        "yzhang.markdown-all-in-one",
         "esbenp.prettier-vscode",
         "redhat.vscode-yaml",
-        "HashiCorp.terraform"
-      ]
+        "yzhang.markdown-all-in-one",
+        "hashicorp.hcl"
+      ],
+      "remote.containers.defaultExtensions": [
+        "atlassian.atlascode",
+        "hashicorp.hcl",
+        "ms-azuretools.vscode-docker",
+        "yzhang.markdown-all-in-one"
+    ]
     }
   },
   "postStartCommand": "eval $(ssh-agent) && ssh-add ~/.ssh/github && bash"
