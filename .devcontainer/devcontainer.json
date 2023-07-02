@@ -19,7 +19,7 @@
         "hashicorp.hcl",
         "ms-azuretools.vscode-docker",
         "yzhang.markdown-all-in-one"
-    ]
+      ]
     }
   },
   "postStartCommand": "eval $(ssh-agent) && ssh-add ~/.ssh/github && bash"
