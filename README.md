@@ -7,8 +7,6 @@
     - [Keep Code simple](#keep-code-simple)
     - [Code Independent](#code-independent)
   - [Guidelines](#guidelines)
-    - [No mixing of declarative and procedural code](#no-mixing-of-declarative-and-procedural-code)
-  - [Directory structure](#directory-structure)
 
 
 
@@ -62,26 +60,3 @@ As much as possible, I try to keep each terraform environment code independent.
 For example, I avoid reference another environment output through statefile. Generally I can reference a resource through terraform's `data` element.
 
 ## [Guidelines](./doc/guidelines.md)
-
-### No mixing of declarative and procedural code
-
-Declarative and procedure coding demand different kind of thinking; each require different setup, and have different sets of problems and solutions. 
-
-I avoid mising them to keep terraform code simple.
-
-For example, I avoid using `null_resource` to run procedural code (e.g. bash script) in the middle of a terraform apply. So far, I can run a separate bash script after an environment is created by terraform.
-
-
-## Directory structure
-
-For AWS, I use
-
-`env/${aws_account_name}/${region}/${environment_name_if_required}`
-
-For GCP, most environments are housed in project, this
-
-`env/${project_name}`
-
-
-TODOs:
-- docker: env-terraform-aws
