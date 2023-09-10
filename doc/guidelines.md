@@ -19,7 +19,7 @@
 
 ### Use folder-based Environment Isolation
 
-Folder based environment isolation is simple and able to keep code in-sync with target environment. Changes to code for an environment does not impact code for other environments or made them out-of-sync with their environments.
+Folder based environment isolation is simple and able to keep code in-sync with target environment. Changes to code for an environment does not impact code for other environments.
 
 ### Use locals instead of variable environment setting
 
@@ -39,7 +39,7 @@ At coding level, using terraform variable, one needs to define same information 
 
 Most repository has multiple terraform environments.
 
-I keep terraform environment under `/env` at repository root level.
+I keep terraform environment in directories under `/env`.
 
 Within `/env` directory, I use directory structure to fully qualified a terraform environment.
 
@@ -105,17 +105,17 @@ I avoid using cryptic name to specify an environment.
 
 e.g. a subnet id `subnet-123456` does not provide meaning.
 
-In most situation, I can use terraform's `data` element with name, tags and other attributes to get id or arn of a resource.
+In most situation, I can use terraform's `data` element select base on name, tags and other attributes to get id or arn of a resource.
 
 ### Avoid Referencing via statefile
 
-I try to keep each terraform environment independent. I avoid referencing another terraform environment's output via its statefile.
+I keep each terraform environment independent. I avoid referencing another terraform environment's output via its statefile.
 
 ### Keep code flat
 
-I like to have all `.tf` files in a directory. I avoid using nested module which make the code complex.
+I have all `.tf` files in a directory. I avoid using nested module which make the code complex.
 
-In earlier version of terraform, it was not easy to work with complex data-structure; using nested module was one way to get around this. This is no longer an issue since.
+In earlier version of terraform, it was not easy to work with complex data-structure; using nested module was one way to get around this. This is no longer an issue.
 
 ### Reference Module with specific version
 

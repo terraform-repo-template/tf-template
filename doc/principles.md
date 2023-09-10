@@ -24,7 +24,7 @@ Keep each terraform environment code isolated from others.
 
 The aims are:
 
-- not impacting resources in other environments;
+- change in code in one environment does not impact other environments;
 
 - able to always keep code in sync with target environment
 
