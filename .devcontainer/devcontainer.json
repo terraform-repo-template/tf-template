@@ -8,11 +8,20 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "timonwong.shellcheck",
-        "yzhang.markdown-all-in-one",
+        "atlassian.atlascode",
         "esbenp.prettier-vscode",
+        "hashicorp.hcl",
+        "HashiCorp.terraform",
+        "ms-azuretools.vscode-docker",
         "redhat.vscode-yaml",
-        "HashiCorp.terraform"
+        "timonwong.shellcheck",
+        "yzhang.markdown-all-in-one"
+      ],
+      "remote.containers.defaultExtensions": [
+        "atlassian.atlascode",
+        "hashicorp.hcl",
+        "ms-azuretools.vscode-docker",
+        "yzhang.markdown-all-in-one"
       ]
     }
   },

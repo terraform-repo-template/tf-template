@@ -1,19 +1,7 @@
 # tf-template
 
-A template for terraform repository.
+This repository is a template of a typical terraform environment; and documents principles and guidelines I used in terraform for Infrastructure-as-Code (IaC). 
 
-Example based on AWS. 
+- [Principles](./doc/principles.md)
 
-## Directory structure
-
-For AWS, I use
-
-`env/${aws_account_name}/${region}/${environment_name_if_required}`
-
-For GCP, most environments are housed in project, this
-
-`env/${project_name}`
-
-
-TODOs:
-- docker: env-terraform-aws
+- [Guidelines](./doc/guidelines.md)
